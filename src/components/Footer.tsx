@@ -1,0 +1,165 @@
+import { motion } from "framer-motion";
+import { MapPin, Phone, Mail, ArrowRight, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Button } from "./ui/button";
+
+const quickLinks = [
+  { label: "Home", href: "#home" },
+  { label: "About Us", href: "#about" },
+  { label: "Products", href: "#products" },
+  { label: "Industries", href: "#industries" },
+  { label: "Testimonials", href: "#testimonials" },
+  { label: "Contact", href: "#contact" },
+];
+
+const products = [
+  "Pipes & Tubes",
+  "Plates & Sheets",
+  "Fasteners",
+  "Pipe & Flange Fittings",
+  "Channel & Angles",
+  "Round/Square Bars",
+];
+
+export const Footer = () => {
+  return (
+    <footer id="contact" className="bg-charcoal text-accent-foreground">
+      {/* Main Footer */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* Company Info */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 bg-gradient-copper rounded-lg flex items-center justify-center">
+                <span className="text-primary-foreground font-display font-bold text-xl">AM</span>
+              </div>
+              <div>
+                <span className="font-display text-xl font-bold text-primary-foreground">Asthsidhi</span>
+                <span className="block text-xs tracking-widest uppercase text-secondary">Metal</span>
+              </div>
+            </div>
+            <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
+              Asthsidhi Metal is a pre-dominant player in the global market for the manufacturing, exporting,
+              subcontracting, importing and stocking industrial raw materials and process equipments.
+            </p>
+            <div className="flex gap-3">
+              {[Facebook, Twitter, Linkedin, Instagram].map((Icon, index) => (
+                <a
+                  key={index}
+                  href="#"
+                  className="w-10 h-10 rounded-full bg-charcoal-light hover:bg-primary flex items-center justify-center transition-colors"
+                >
+                  <Icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Quick Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <h3 className="font-display text-lg mb-6 text-primary-foreground">Quick Links</h3>
+            <ul className="space-y-3">
+              {quickLinks.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    className="text-muted-foreground hover:text-primary flex items-center gap-2 transition-colors group"
+                  >
+                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Products */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <h3 className="font-display text-lg mb-6 text-primary-foreground">Products</h3>
+            <ul className="space-y-3">
+              {products.map((product) => (
+                <li key={product}>
+                  <a
+                    href="#products"
+                    className="text-muted-foreground hover:text-primary flex items-center gap-2 transition-colors group"
+                  >
+                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                    {product}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Contact */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <h3 className="font-display text-lg mb-6 text-primary-foreground">Contact Us</h3>
+            <ul className="space-y-4">
+              <li className="flex gap-3">
+                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                <span className="text-muted-foreground text-sm">
+                  Office No.101, Building 105, Industrial Area, Mumbai - 400004, INDIA
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
+                <div className="text-muted-foreground text-sm">
+                  <p>+91-98203-69290</p>
+                  <p>+91-22-6636-3290</p>
+                </div>
+              </li>
+              <li className="flex gap-3">
+                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
+                <div className="text-muted-foreground text-sm">
+                  <p>info@asthsidhimetal.com</p>
+                  <p>sales@asthsidhimetal.com</p>
+                </div>
+              </li>
+            </ul>
+            <Button variant="hero" size="sm" className="mt-6">
+              Get Quote
+            </Button>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-charcoal-light">
+        <div className="container mx-auto px-4 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-muted-foreground text-sm">
+              © {new Date().getFullYear()} Asthsidhi Metal. All rights reserved.
+            </p>
+            <div className="flex gap-6 text-sm">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                Terms of Service
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
