@@ -1,23 +1,24 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, ArrowRight, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 const quickLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
-  { label: "Products", href: "#products" },
-  { label: "Industries", href: "#industries" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Products", href: "/products" },
+  { label: "Industries", href: "/industries" },
+  { label: "Testimonials", href: "/testimonials" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const products = [
-  "Pipes & Tubes",
-  "Plates & Sheets",
-  "Fasteners",
-  "Pipe & Flange Fittings",
-  "Channel & Angles",
-  "Round/Square Bars",
+  { label: "Pipes & Tubes", href: "/products/pipes-tubes" },
+  { label: "Plates & Sheets", href: "/products/plates-sheets" },
+  { label: "Fasteners", href: "/products/fasteners" },
+  { label: "Pipe & Flange Fittings", href: "/products/pipe-flanges" },
+  { label: "Channel & Angles", href: "/products/channel-angles" },
+  { label: "Round/Square Bars", href: "/products/round-square-bars" },
 ];
 
 export const Footer = () => {
@@ -70,13 +71,13 @@ export const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-muted-foreground hover:text-primary flex items-center gap-2 transition-colors group"
                   >
                     <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -92,14 +93,14 @@ export const Footer = () => {
             <h3 className="font-display text-lg mb-6 text-primary-foreground">Products</h3>
             <ul className="space-y-3">
               {products.map((product) => (
-                <li key={product}>
-                  <a
-                    href="#products"
+                <li key={product.label}>
+                  <Link
+                    to={product.href}
                     className="text-muted-foreground hover:text-primary flex items-center gap-2 transition-colors group"
                   >
                     <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                    {product}
-                  </a>
+                    {product.label}
+                  </Link>
                 </li>
               ))}
             </ul>

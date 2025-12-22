@@ -2,25 +2,26 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Download, Phone } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
   {
     label: "Products",
-    href: "#products",
+    href: "/products",
     dropdown: [
-      { label: "Pipes & Tubes", href: "#products" },
-      { label: "Plates & Sheets", href: "#products" },
-      { label: "Fasteners", href: "#products" },
-      { label: "Pipe & Flange Fittings", href: "#products" },
-      { label: "Channel & Angles", href: "#products" },
-      { label: "Round/Square Bars", href: "#products" },
+      { label: "Pipes & Tubes", href: "/products/pipes-tubes" },
+      { label: "Plates & Sheets", href: "/products/plates-sheets" },
+      { label: "Fasteners", href: "/products/fasteners" },
+      { label: "Pipe & Flange Fittings", href: "/products/pipe-flanges" },
+      { label: "Channel & Angles", href: "/products/channel-angles" },
+      { label: "Round/Square Bars", href: "/products/round-square-bars" },
     ],
   },
-  { label: "Industries", href: "#industries" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  { label: "Industries", href: "/industries" },
+  { label: "Testimonials", href: "/testimonials" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const Navbar = () => {
@@ -49,7 +50,7 @@ export const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <div className="w-12 h-12 bg-gradient-copper rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-display font-bold text-xl">AM</span>
             </div>
@@ -61,7 +62,7 @@ export const Navbar = () => {
                 Metal
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
@@ -72,8 +73,8 @@ export const Navbar = () => {
                 onMouseEnter={() => item.dropdown && setActiveDropdown(item.label)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className={`flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors ${
                     isScrolled
                       ? "text-foreground hover:text-primary"
@@ -82,7 +83,7 @@ export const Navbar = () => {
                 >
                   {item.label}
                   {item.dropdown && <ChevronDown className="w-4 h-4" />}
-                </a>
+                </Link>
                 
                 <AnimatePresence>
                   {item.dropdown && activeDropdown === item.label && (
@@ -93,13 +94,13 @@ export const Navbar = () => {
                       className="absolute top-full left-0 w-56 py-2 bg-card rounded-lg shadow-elevated border border-border"
                     >
                       {item.dropdown.map((subItem) => (
-                        <a
+                        <Link
                           key={subItem.label}
-                          href={subItem.href}
+                          to={subItem.href}
                           className="block px-4 py-2 text-sm text-card-foreground hover:bg-muted hover:text-primary transition-colors"
                         >
                           {subItem.label}
-                        </a>
+                        </Link>
                       ))}
                     </motion.div>
                   )}
@@ -114,10 +115,12 @@ export const Navbar = () => {
               <Download className="w-4 h-4" />
               Brochure
             </Button>
-            <Button variant="hero" size="sm">
-              <Phone className="w-4 h-4" />
-              Contact Us
-            </Button>
+            <Link to="/contact">
+              <Button variant="hero" size="sm">
+                <Phone className="w-4 h-4" />
+                Contact Us
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -142,24 +145,24 @@ export const Navbar = () => {
             <div className="container mx-auto px-4 py-4">
               {navItems.map((item) => (
                 <div key={item.label}>
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block py-3 text-foreground hover:text-primary font-medium border-b border-border/50"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                   {item.dropdown && (
                     <div className="pl-4 bg-muted/50">
                       {item.dropdown.map((subItem) => (
-                        <a
+                        <Link
                           key={subItem.label}
-                          href={subItem.href}
+                          to={subItem.href}
                           onClick={() => setIsMobileMenuOpen(false)}
                           className="block py-2 text-sm text-muted-foreground hover:text-primary"
                         >
                           {subItem.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}
@@ -170,10 +173,12 @@ export const Navbar = () => {
                   <Download className="w-4 h-4" />
                   Download Brochure
                 </Button>
-                <Button variant="hero" className="w-full">
-                  <Phone className="w-4 h-4" />
-                  Contact Us
-                </Button>
+                <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button variant="hero" className="w-full">
+                    <Phone className="w-4 h-4" />
+                    Contact Us
+                  </Button>
+                </Link>
               </div>
             </div>
           </motion.div>
