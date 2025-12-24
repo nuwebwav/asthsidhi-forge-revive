@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Download, Phone } from "lucide-react";
 import { Button } from "./ui/button";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -51,14 +52,12 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-gradient-copper rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-display font-bold text-xl">AM</span>
-            </div>
+            <img src={logo} alt="Asthsidhi Metal Logo" className="h-14 w-auto" />
             <div className="hidden sm:block">
               <span className={`font-display text-xl font-bold ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
                 Asthsidhi
               </span>
-              <span className={`block text-xs tracking-widest uppercase ${isScrolled ? "text-primary" : "text-secondary"}`}>
+              <span className={`block text-xs tracking-widest uppercase ${isScrolled ? "text-secondary" : "text-secondary"}`}>
                 Metal
               </span>
             </div>

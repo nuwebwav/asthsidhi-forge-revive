@@ -9,16 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-copper-dark shadow-copper hover:shadow-lg",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline: "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/90",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-primary text-primary-foreground hover:bg-copper-dark shadow-copper hover:shadow-lg transform hover:-translate-y-1",
+        hero: "bg-secondary text-secondary-foreground hover:bg-copper-dark shadow-md hover:shadow-lg transform hover:-translate-y-1",
         heroOutline: "border-2 border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground/10 backdrop-blur-sm",
-        copper: "bg-gradient-copper text-primary-foreground shadow-copper hover:shadow-lg transform hover:-translate-y-1",
-        steel: "bg-charcoal text-accent-foreground hover:bg-charcoal-light border border-steel/30",
+        copper: "bg-secondary text-secondary-foreground shadow-md hover:shadow-lg transform hover:-translate-y-1",
+        steel: "bg-primary text-primary-foreground hover:bg-primary/90 border border-steel/30",
       },
       size: {
         default: "h-10 px-6 py-2",
