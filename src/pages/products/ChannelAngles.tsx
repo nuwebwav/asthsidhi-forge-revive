@@ -5,6 +5,8 @@ import { ArrowRight, CheckCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import channelAngles from "@/assets/products/channel-angles.jpg";
 
+import productsHeroBanner from "@/assets/products_hero_banner.png";
+
 const specifications = [
   { label: "Channel Size", value: "50mm to 400mm" },
   { label: "Angle Size", value: "20x20mm to 200x200mm" },
@@ -47,23 +49,31 @@ const ChannelAngles = () => {
   return (
     <main className="min-h-screen">
       <Navbar />
-      
+
       {/* Hero Banner */}
-      <section className="pt-32 pb-20 bg-gradient-steel">
-        <div className="container mx-auto px-4">
+      <section className="relative pt-32 pb-20 min-h-[50vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={productsHeroBanner}
+            alt="Channel & Angles Background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/75" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <Link to="/products" className="text-primary font-display text-sm tracking-[0.3em] uppercase hover:underline">
+            <Link to="/products" className="text-white font-display text-sm tracking-[0.3em] uppercase hover:underline">
               Our Products
             </Link>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-accent-foreground mt-4">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mt-4">
               Channel & <span className="text-gradient-copper">Angles</span>
             </h1>
-            <p className="text-muted-foreground text-lg mt-6 max-w-2xl mx-auto">
+            <p className="text-gray-200 text-lg mt-6 max-w-2xl mx-auto">
               Structural steel channels and angles for construction and industrial applications.
             </p>
           </motion.div>
@@ -97,12 +107,12 @@ const ChannelAngles = () => {
                 Product Overview
               </h2>
               <p className="text-muted-foreground mb-6">
-                Asthsidhi Metal supplies a comprehensive range of structural steel sections 
-                including channels and angles. Our products are manufactured to international 
+                Asthsidhi Metal supplies a comprehensive range of structural steel sections
+                including channels and angles. Our products are manufactured to international
                 standards and are widely used in construction, industrial, and infrastructure projects.
               </p>
               <p className="text-muted-foreground mb-8">
-                We maintain large stocks of standard sizes and can also supply custom lengths 
+                We maintain large stocks of standard sizes and can also supply custom lengths
                 and specifications to meet your project requirements.
               </p>
 

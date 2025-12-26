@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, ArrowRight, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -35,15 +36,13 @@ export const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-copper rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-display font-bold text-xl">AM</span>
-              </div>
+              <img src={logo} alt="Asthsidhi Metal Logo" className="h-14 w-auto" />
               <div>
                 <span className="font-display text-xl font-bold text-primary-foreground">Asthsidhi</span>
                 <span className="block text-xs tracking-widest uppercase text-secondary">Metal</span>
               </div>
             </div>
-            <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
+            <p className="text-white text-sm mb-6 leading-relaxed">
               Asthsidhi Metal is a pre-dominant player in the global market for the manufacturing, exporting,
               subcontracting, importing and stocking industrial raw materials and process equipments.
             </p>
@@ -52,7 +51,7 @@ export const Footer = () => {
                 <a
                   key={index}
                   href="#"
-                  className="w-10 h-10 rounded-full bg-charcoal-light hover:bg-primary flex items-center justify-center transition-colors"
+                  className="w-10 h-10 rounded-full bg-charcoal-light hover:bg-primary flex items-center justify-center transition-colors text-white"
                 >
                   <Icon className="w-5 h-5" />
                 </a>
@@ -73,7 +72,7 @@ export const Footer = () => {
                 <li key={link.label}>
                   <Link
                     to={link.href}
-                    className="text-muted-foreground hover:text-primary flex items-center gap-2 transition-colors group"
+                    className="text-white hover:text-gray-300 flex items-center gap-2 transition-colors group"
                   >
                     <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                     {link.label}
@@ -96,7 +95,7 @@ export const Footer = () => {
                 <li key={product.label}>
                   <Link
                     to={product.href}
-                    className="text-muted-foreground hover:text-primary flex items-center gap-2 transition-colors group"
+                    className="text-white hover:text-gray-300 flex items-center gap-2 transition-colors group"
                   >
                     <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                     {product.label}
@@ -116,21 +115,21 @@ export const Footer = () => {
             <h3 className="font-display text-lg mb-6 text-primary-foreground">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex gap-3">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground text-sm">
+                <MapPin className="w-5 h-5 text-white flex-shrink-0 mt-1" />
+                <span className="text-white text-sm">
                   Office No.101, Building 105, Industrial Area, Mumbai - 400004, INDIA
                 </span>
               </li>
               <li className="flex gap-3">
-                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <div className="text-muted-foreground text-sm">
+                <Phone className="w-5 h-5 text-white flex-shrink-0" />
+                <div className="text-white text-sm">
                   <p>+91-98203-69290</p>
                   <p>+91-22-6636-3290</p>
                 </div>
               </li>
               <li className="flex gap-3">
-                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <div className="text-muted-foreground text-sm">
+                <Mail className="w-5 h-5 text-white flex-shrink-0" />
+                <div className="text-white text-sm">
                   <p>info@asthsidhimetal.com</p>
                   <p>sales@asthsidhimetal.com</p>
                 </div>
@@ -147,14 +146,14 @@ export const Footer = () => {
       <div className="border-t border-charcoal-light">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-muted-foreground text-sm">
+            <p className="text-white text-sm">
               © {new Date().getFullYear()} Asthsidhi Metal. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-white hover:text-gray-300 transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-white hover:text-gray-300 transition-colors">
                 Terms of Service
               </a>
             </div>

@@ -5,6 +5,8 @@ import { ArrowRight, CheckCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import pipesTubes from "@/assets/products/pipes-tubes.jpg";
 
+import productsHeroBanner from "@/assets/products_hero_banner.png";
+
 const specifications = [
   { label: "Outer Diameter", value: "6mm to 914mm" },
   { label: "Wall Thickness", value: "0.5mm to 50mm" },
@@ -45,23 +47,31 @@ const PipesTubes = () => {
   return (
     <main className="min-h-screen">
       <Navbar />
-      
+
       {/* Hero Banner */}
-      <section className="pt-32 pb-20 bg-gradient-steel">
-        <div className="container mx-auto px-4">
+      <section className="relative pt-32 pb-20 min-h-[50vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={productsHeroBanner}
+            alt="Pipes & Tubes Background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/75" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <Link to="/products" className="text-primary font-display text-sm tracking-[0.3em] uppercase hover:underline">
+            <Link to="/products" className="text-white font-display text-sm tracking-[0.3em] uppercase hover:underline">
               Our Products
             </Link>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-accent-foreground mt-4">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mt-4">
               Pipes & <span className="text-gradient-copper">Tubes</span>
             </h1>
-            <p className="text-muted-foreground text-lg mt-6 max-w-2xl mx-auto">
+            <p className="text-gray-200 text-lg mt-6 max-w-2xl mx-auto">
               High-quality stainless steel, carbon steel, and alloy steel pipes and tubes for various industrial applications.
             </p>
           </motion.div>
@@ -95,12 +105,12 @@ const PipesTubes = () => {
                 Product Overview
               </h2>
               <p className="text-muted-foreground mb-6">
-                Asthsidhi Metal offers a comprehensive range of pipes and tubes manufactured to 
-                international standards. Our products are sourced from leading manufacturers and 
+                Asthsidhi Metal offers a comprehensive range of pipes and tubes manufactured to
+                international standards. Our products are sourced from leading manufacturers and
                 undergo rigorous quality checks to ensure superior performance in demanding applications.
               </p>
               <p className="text-muted-foreground mb-8">
-                Whether you need seamless pipes for high-pressure applications or welded tubes for 
+                Whether you need seamless pipes for high-pressure applications or welded tubes for
                 structural purposes, we have the right solution for your requirements.
               </p>
 

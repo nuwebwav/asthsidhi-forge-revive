@@ -16,6 +16,7 @@ import Fasteners from "./pages/products/Fasteners";
 import PipeFlanges from "./pages/products/PipeFlanges";
 import ChannelAngles from "./pages/products/ChannelAngles";
 import RoundSquareBars from "./pages/products/RoundSquareBars";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />

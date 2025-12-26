@@ -5,6 +5,8 @@ import { ArrowRight, CheckCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import roundSquareBars from "@/assets/products/round-square-bars.jpg";
 
+import productsHeroBanner from "@/assets/products_hero_banner.png";
+
 const specifications = [
   { label: "Round Bar Dia", value: "3mm to 500mm" },
   { label: "Square Bar Size", value: "6mm to 200mm" },
@@ -47,23 +49,31 @@ const RoundSquareBars = () => {
   return (
     <main className="min-h-screen">
       <Navbar />
-      
+
       {/* Hero Banner */}
-      <section className="pt-32 pb-20 bg-gradient-steel">
-        <div className="container mx-auto px-4">
+      <section className="relative pt-32 pb-20 min-h-[50vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={productsHeroBanner}
+            alt="Round & Square Bars Background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/75" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <Link to="/products" className="text-primary font-display text-sm tracking-[0.3em] uppercase hover:underline">
+            <Link to="/products" className="text-white font-display text-sm tracking-[0.3em] uppercase hover:underline">
               Our Products
             </Link>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-accent-foreground mt-4">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mt-4">
               Round & Square <span className="text-gradient-copper">Bars</span>
             </h1>
-            <p className="text-muted-foreground text-lg mt-6 max-w-2xl mx-auto">
+            <p className="text-gray-200 text-lg mt-6 max-w-2xl mx-auto">
               Quality round and square bars for machining, fabrication, and engineering applications.
             </p>
           </motion.div>
@@ -97,12 +107,12 @@ const RoundSquareBars = () => {
                 Product Overview
               </h2>
               <p className="text-muted-foreground mb-6">
-                Asthsidhi Metal offers a wide range of round and square bars in various materials 
-                and finishes. Our bars are manufactured to close tolerances and are ideal for 
+                Asthsidhi Metal offers a wide range of round and square bars in various materials
+                and finishes. Our bars are manufactured to close tolerances and are ideal for
                 machining, forging, and general engineering applications.
               </p>
               <p className="text-muted-foreground mb-8">
-                We stock both bright finished (cold drawn) and black (hot rolled) bars in 
+                We stock both bright finished (cold drawn) and black (hot rolled) bars in
                 standard sizes and can also supply custom sizes and lengths as per your requirements.
               </p>
 

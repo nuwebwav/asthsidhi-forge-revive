@@ -74,7 +74,7 @@ export const Navbar = () => {
               >
                 <Link
                   to={item.href}
-                  className={`flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors ${
+                  className={`flex items-center gap-1 px-4 py-2 text-sm font-medium uppercase transition-colors ${
                     isScrolled
                       ? "text-foreground hover:text-primary"
                       : "text-primary-foreground/90 hover:text-primary-foreground"
@@ -96,7 +96,7 @@ export const Navbar = () => {
                         <Link
                           key={subItem.label}
                           to={subItem.href}
-                          className="block px-4 py-2 text-sm text-card-foreground hover:bg-muted hover:text-primary transition-colors"
+                          className="block px-4 py-2 text-sm uppercase text-card-foreground hover:bg-muted hover:text-primary transition-colors"
                         >
                           {subItem.label}
                         </Link>
@@ -147,7 +147,7 @@ export const Navbar = () => {
                   <Link
                     to={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block py-3 text-foreground hover:text-primary font-medium border-b border-border/50"
+                    className="block py-3 uppercase text-foreground hover:text-primary font-medium border-b border-border/50"
                   >
                     {item.label}
                   </Link>
@@ -158,7 +158,7 @@ export const Navbar = () => {
                           key={subItem.label}
                           to={subItem.href}
                           onClick={() => setIsMobileMenuOpen(false)}
-                          className="block py-2 text-sm text-muted-foreground hover:text-primary"
+                          className="block py-2 text-sm uppercase text-muted-foreground hover:text-primary"
                         >
                           {subItem.label}
                         </Link>

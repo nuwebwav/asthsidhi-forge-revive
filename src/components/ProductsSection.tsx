@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import pipesTubes from "@/assets/products/pipes-tubes.jpg";
 import platesSheets from "@/assets/products/plates-sheets.jpg";
 import fasteners from "@/assets/products/fasteners.jpg";
@@ -10,12 +11,12 @@ import channelAngles from "@/assets/products/channel-angles.jpg";
 import roundSquareBars from "@/assets/products/round-square-bars.jpg";
 
 const products = [
-  { image: pipesTubes, title: "Pipes & Tubes" },
-  { image: platesSheets, title: "Plates & Sheets" },
-  { image: fasteners, title: "Fasteners" },
-  { image: pipeFlanges, title: "Pipe & Flange Fittings" },
-  { image: channelAngles, title: "Channel & Angles" },
-  { image: roundSquareBars, title: "Round/Square Bars" },
+  { image: pipesTubes, title: "Pipes & Tubes", path: "/products/pipes-tubes" },
+  { image: platesSheets, title: "Plates & Sheets", path: "/products/plates-sheets" },
+  { image: fasteners, title: "Fasteners", path: "/products/fasteners" },
+  { image: pipeFlanges, title: "Pipe & Flange Fittings", path: "/products/pipe-flanges" },
+  { image: channelAngles, title: "Channel & Angles", path: "/products/channel-angles" },
+  { image: roundSquareBars, title: "Round/Square Bars", path: "/products/round-square-bars" },
 ];
 
 export const ProductsSection = () => {
@@ -54,19 +55,19 @@ export const ProductsSection = () => {
                   alt={product.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
               </div>
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="font-display text-xl text-primary-foreground mb-3 group-hover:text-secondary transition-colors">
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
+                <h3 className="font-display text-xl text-primary-foreground mb-3 group-hover:text-white transition-colors">
                   {product.title}
                 </h3>
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-2 text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all"
+                <Link
+                  to={product.path}
+                  className="inline-flex items-center gap-2 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all"
                 >
                   Read More
                   <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
               <div className="absolute top-4 right-4 w-10 h-10 bg-primary rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-0 group-hover:scale-100 transition-all">
                 <ArrowRight className="w-5 h-5 text-primary-foreground" />

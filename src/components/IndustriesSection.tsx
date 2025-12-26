@@ -1,14 +1,20 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Zap, Factory, Droplets, Wrench, Fuel } from "lucide-react";
+import powerPlants from "@/assets/products/power_plants.png";
+import sugarIndustry from "@/assets/products/sugar_industry.png";
+import petrochemical from "@/assets/products/petrochemical.png";
+import fabrication from "@/assets/products/fabrication.png";
+// Reusing petrochemical for oil & gas due to generation limit, which is visually similar
+const oilGas = petrochemical;
 
 const industries = [
-  { icon: Zap, name: "Power Plants" },
-  { icon: Factory, name: "Sugar Industries" },
-  { icon: Droplets, name: "Petrochemical" },
-  { icon: Wrench, name: "Fabrication" },
-  { icon: Fuel, name: "Oil & Gas Industries" },
+  { image: powerPlants, name: "Power Plants" },
+  { image: sugarIndustry, name: "Sugar Industries" },
+  { image: petrochemical, name: "Petrochemical" },
+  { image: fabrication, name: "Fabrication" },
+  { image: oilGas, name: "Oil & Gas Industries" },
+  { image: petrochemical, name: "Fertilizers" },
 ];
 
 export const IndustriesSection = () => {
@@ -32,22 +38,25 @@ export const IndustriesSection = () => {
           </h2>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-6 lg:gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 justify-center">
           {industries.map((industry, index) => (
             <motion.div
               key={industry.name}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group"
+              className="group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-copper transition-shadow duration-300"
             >
-              <div className="w-32 h-32 lg:w-40 lg:h-40 rounded-2xl bg-card border-2 border-border hover:border-primary flex flex-col items-center justify-center gap-4 transition-all duration-300 hover:shadow-copper hover:-translate-y-2 cursor-pointer">
-                <div className="w-14 h-14 rounded-xl bg-muted group-hover:bg-gradient-copper flex items-center justify-center transition-all duration-300">
-                  <industry.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
-                </div>
-                <span className="font-display text-sm text-center text-foreground px-2">
+              <img
+                src={industry.image}
+                alt={industry.name}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+              <div className="absolute inset-0 flex items-end justify-center p-6">
+                <h3 className="font-display text-xl md:text-2xl text-white text-center group-hover:text-white group-hover:scale-105 transition-all duration-300">
                   {industry.name}
-                </span>
+                </h3>
               </div>
             </motion.div>
           ))}

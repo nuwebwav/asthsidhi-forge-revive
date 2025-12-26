@@ -5,6 +5,8 @@ import { ArrowRight, CheckCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import platesSheets from "@/assets/products/plates-sheets.jpg";
 
+import productsHeroBanner from "@/assets/products_hero_banner.png";
+
 const specifications = [
   { label: "Thickness", value: "0.3mm to 200mm" },
   { label: "Width", value: "1000mm to 3000mm" },
@@ -45,23 +47,31 @@ const PlatesSheets = () => {
   return (
     <main className="min-h-screen">
       <Navbar />
-      
+
       {/* Hero Banner */}
-      <section className="pt-32 pb-20 bg-gradient-steel">
-        <div className="container mx-auto px-4">
+      <section className="relative pt-32 pb-20 min-h-[50vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={productsHeroBanner}
+            alt="Plates & Sheets Background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/75" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <Link to="/products" className="text-primary font-display text-sm tracking-[0.3em] uppercase hover:underline">
+            <Link to="/products" className="text-white font-display text-sm tracking-[0.3em] uppercase hover:underline">
               Our Products
             </Link>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-accent-foreground mt-4">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mt-4">
               Plates & <span className="text-gradient-copper">Sheets</span>
             </h1>
-            <p className="text-muted-foreground text-lg mt-6 max-w-2xl mx-auto">
+            <p className="text-gray-200 text-lg mt-6 max-w-2xl mx-auto">
               Premium quality steel plates and sheets available in various thicknesses, grades, and surface finishes.
             </p>
           </motion.div>
@@ -95,12 +105,12 @@ const PlatesSheets = () => {
                 Product Overview
               </h2>
               <p className="text-muted-foreground mb-6">
-                We offer a wide range of plates and sheets in various materials including stainless steel, 
-                carbon steel, and alloy steel. Our products are available in multiple thicknesses and 
+                We offer a wide range of plates and sheets in various materials including stainless steel,
+                carbon steel, and alloy steel. Our products are available in multiple thicknesses and
                 surface finishes to meet diverse industrial requirements.
               </p>
               <p className="text-muted-foreground mb-8">
-                All our plates and sheets undergo rigorous quality testing to ensure they meet 
+                All our plates and sheets undergo rigorous quality testing to ensure they meet
                 international standards for mechanical properties and chemical composition.
               </p>
 

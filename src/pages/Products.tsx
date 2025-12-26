@@ -11,44 +11,44 @@ import channelAngles from "@/assets/products/channel-angles.jpg";
 import roundSquareBars from "@/assets/products/round-square-bars.jpg";
 
 const products = [
-  { 
+  {
     id: "pipes-tubes",
-    image: pipesTubes, 
+    image: pipesTubes,
     title: "Pipes & Tubes",
     description: "High-quality stainless steel, carbon steel, and alloy steel pipes and tubes for various industrial applications.",
     features: ["Seamless & Welded", "Various Grades", "Custom Sizes", "Corrosion Resistant"]
   },
-  { 
+  {
     id: "plates-sheets",
-    image: platesSheets, 
+    image: platesSheets,
     title: "Plates & Sheets",
     description: "Premium quality steel plates and sheets available in various thicknesses and grades.",
     features: ["Multiple Thicknesses", "Hot & Cold Rolled", "Cut to Size", "Surface Finish Options"]
   },
-  { 
+  {
     id: "fasteners",
-    image: fasteners, 
+    image: fasteners,
     title: "Fasteners",
     description: "Complete range of industrial fasteners including bolts, nuts, screws, and washers.",
     features: ["High Tensile", "Stainless Steel", "Various Standards", "Custom Manufacturing"]
   },
-  { 
+  {
     id: "pipe-flanges",
-    image: pipeFlanges, 
+    image: pipeFlanges,
     title: "Pipe & Flange Fittings",
     description: "Precision-engineered pipe fittings and flanges for secure connections.",
     features: ["ANSI/ASME Standards", "All Pressure Ratings", "Various Materials", "Tight Tolerances"]
   },
-  { 
+  {
     id: "channel-angles",
-    image: channelAngles, 
+    image: channelAngles,
     title: "Channel & Angles",
     description: "Structural steel channels and angles for construction and industrial use.",
     features: ["Standard & Custom Sizes", "High Strength", "Precision Cut", "Various Grades"]
   },
-  { 
+  {
     id: "round-square-bars",
-    image: roundSquareBars, 
+    image: roundSquareBars,
     title: "Round/Square Bars",
     description: "Quality round and square bars for machining and fabrication needs.",
     features: ["Bright & Black Finish", "Close Tolerances", "Multiple Grades", "Custom Lengths"]
@@ -64,27 +64,37 @@ const materials = [
   "Titanium & Copper Alloys",
 ];
 
+import productsHeroBanner from "@/assets/products_hero_banner.png";
+
 const Products = () => {
   return (
     <main className="min-h-screen">
       <Navbar />
-      
+
       {/* Hero Banner */}
-      <section className="pt-32 pb-20 bg-gradient-steel">
-        <div className="container mx-auto px-4">
+      <section className="relative pt-32 pb-20 min-h-[50vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={productsHeroBanner}
+            alt="Products Hero Banner"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/75" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <span className="text-primary font-display text-sm tracking-[0.3em] uppercase">
+            <span className="text-white font-display text-sm tracking-[0.3em] uppercase">
               Our Products
             </span>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-accent-foreground mt-4">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mt-4">
               Quality <span className="text-gradient-copper">Steel Products</span>
             </h1>
-            <p className="text-muted-foreground text-lg mt-6 max-w-2xl mx-auto">
+            <p className="text-gray-200 text-lg mt-6 max-w-2xl mx-auto">
               Comprehensive range of industrial steel products manufactured to the highest international standards.
             </p>
           </motion.div>

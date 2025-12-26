@@ -5,6 +5,8 @@ import { ArrowRight, CheckCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import pipeFlanges from "@/assets/products/pipe-flanges.jpg";
 
+import productsHeroBanner from "@/assets/products_hero_banner.png";
+
 const specifications = [
   { label: "Size Range", value: "1/2\" to 72\"" },
   { label: "Pressure Class", value: "150# to 2500#" },
@@ -58,23 +60,31 @@ const PipeFlanges = () => {
   return (
     <main className="min-h-screen">
       <Navbar />
-      
+
       {/* Hero Banner */}
-      <section className="pt-32 pb-20 bg-gradient-steel">
-        <div className="container mx-auto px-4">
+      <section className="relative pt-32 pb-20 min-h-[50vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={productsHeroBanner}
+            alt="Pipe & Flange Fittings Background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/75" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <Link to="/products" className="text-primary font-display text-sm tracking-[0.3em] uppercase hover:underline">
+            <Link to="/products" className="text-white font-display text-sm tracking-[0.3em] uppercase hover:underline">
               Our Products
             </Link>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-accent-foreground mt-4">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mt-4">
               Pipe & Flange <span className="text-gradient-copper">Fittings</span>
             </h1>
-            <p className="text-muted-foreground text-lg mt-6 max-w-2xl mx-auto">
+            <p className="text-gray-200 text-lg mt-6 max-w-2xl mx-auto">
               Precision-engineered pipe fittings and flanges for secure, leak-proof connections.
             </p>
           </motion.div>
@@ -108,12 +118,12 @@ const PipeFlanges = () => {
                 Product Overview
               </h2>
               <p className="text-muted-foreground mb-6">
-                We supply a complete range of flanges and pipe fittings manufactured to 
-                ANSI/ASME, DIN, and other international standards. Our products are sourced 
+                We supply a complete range of flanges and pipe fittings manufactured to
+                ANSI/ASME, DIN, and other international standards. Our products are sourced
                 from certified manufacturers and come with full material certification.
               </p>
               <p className="text-muted-foreground mb-8">
-                All flanges and fittings undergo dimensional inspection, hydrostatic testing, 
+                All flanges and fittings undergo dimensional inspection, hydrostatic testing,
                 and chemical/mechanical testing to ensure reliable performance in critical applications.
               </p>
 
