@@ -5,14 +5,14 @@ import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    text: "Best part of Asthsidhi Metal is that they communicate well in advance. Set a plan, schedule & check twice before they supply. Their team has vast knowledge of stainless steel pipes and tubes. Excellent service!",
+    text: "Best part of Astsiddhi Metal is that they communicate well in advance. Set a plan, schedule & check twice before they supply. Their team has vast knowledge of stainless steel pipes and tubes. Excellent service!",
     author: "Rajesh Kumar",
     position: "Procurement Manager",
     company: "Steel Works Ltd",
     rating: 5,
   },
   {
-    text: "We use Asthsidhi Metal because their standard is quality, performance, and pricing. If I were to describe them in one word, it would be 'solid', just like their products.",
+    text: "We use Astsiddhi Metal because their standard is quality, performance, and pricing. If I were to describe them in one word, it would be 'solid', just like their products.",
     author: "Amit Sharma",
     position: "Operations Director",
     company: "Industrial Solutions",
@@ -26,21 +26,21 @@ const testimonials = [
     rating: 5,
   },
   {
-    text: "Outstanding quality and reliable delivery. Asthsidhi Metal has been our trusted partner for over 5 years. Their commitment to excellence is unmatched in the industry.",
+    text: "Outstanding quality and reliable delivery. Astsiddhi Metal has been our trusted partner for over 5 years. Their commitment to excellence is unmatched in the industry.",
     author: "Vikram Singh",
     position: "CEO",
     company: "Metal Fab Industries",
     rating: 5,
   },
   {
-    text: "The team at Asthsidhi Metal goes above and beyond to ensure customer satisfaction. Their technical expertise and prompt service have made them our go-to supplier.",
+    text: "The team at Astsiddhi Metal goes above and beyond to ensure customer satisfaction. Their technical expertise and prompt service have made them our go-to supplier.",
     author: "Sunita Reddy",
     position: "Purchase Head",
     company: "Power Gen Corp",
     rating: 5,
   },
   {
-    text: "We've been working with Asthsidhi Metal for the past decade. Their consistency in quality and competitive pricing has helped us maintain our edge in the market.",
+    text: "We've been working with Astsiddhi Metal for the past decade. Their consistency in quality and competitive pricing has helped us maintain our edge in the market.",
     author: "Mohammed Khan",
     position: "Managing Director",
     company: "Gulf Engineering",
@@ -54,7 +54,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    text: "Asthsidhi Metal has been instrumental in our project's success. Their ability to source specialized materials on short notice is remarkable.",
+    text: "Astsiddhi Metal has been instrumental in our project's success. Their ability to source specialized materials on short notice is remarkable.",
     author: "Anita Joshi",
     position: "Project Manager",
     company: "Infrastructure Ltd",

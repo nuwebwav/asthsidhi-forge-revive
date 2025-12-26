@@ -107,7 +107,7 @@ const RoundSquareBars = () => {
                 Product Overview
               </h2>
               <p className="text-muted-foreground mb-6">
-                Asthsidhi Metal offers a wide range of round and square bars in various materials
+                Astsiddhi Metal offers a wide range of round and square bars in various materials
                 and finishes. Our bars are manufactured to close tolerances and are ideal for
                 machining, forging, and general engineering applications.
               </p>

@@ -36,14 +36,14 @@ export const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <img src={logo} alt="Asthsidhi Metal Logo" className="h-14 w-auto" />
+              <img src={logo} alt="Astsiddhi Metal Logo" className="h-14 w-auto" />
               <div>
                 <span className="font-display text-xl font-bold text-primary-foreground">Asthsidhi</span>
                 <span className="block text-xs tracking-widest uppercase text-secondary">Metal</span>
               </div>
             </div>
             <p className="text-white text-sm mb-6 leading-relaxed">
-              Asthsidhi Metal is a pre-dominant player in the global market for the manufacturing, exporting,
+              Astsiddhi Metal is a pre-dominant player in the global market for the manufacturing, exporting,
               subcontracting, importing and stocking industrial raw materials and process equipments.
             </p>
             <div className="flex gap-3">
@@ -147,7 +147,7 @@ export const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white text-sm">
-              © {new Date().getFullYear()} Asthsidhi Metal. All rights reserved.
+              © {new Date().getFullYear()} Astsiddhi Metal. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-white hover:text-gray-300 transition-colors">

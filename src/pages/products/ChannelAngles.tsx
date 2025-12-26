@@ -107,7 +107,7 @@ const ChannelAngles = () => {
                 Product Overview
               </h2>
               <p className="text-muted-foreground mb-6">
-                Asthsidhi Metal supplies a comprehensive range of structural steel sections
+                Astsiddhi Metal supplies a comprehensive range of structural steel sections
                 including channels and angles. Our products are manufactured to international
                 standards and are widely used in construction, industrial, and infrastructure projects.
               </p>

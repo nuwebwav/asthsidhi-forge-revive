@@ -43,10 +43,10 @@ export const AboutSection = () => {
               About Us
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mt-4 mb-6">
-              Welcome to <span className="text-gradient-copper">Asthsidhi Metal</span>
+              Welcome to <span className="text-gradient-copper">Astsiddhi Metal</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-6">
-              Asthsidhi Metal is a pre-dominant player in the global market for the
+              Astsiddhi Metal is a pre-dominant player in the global market for the
               manufacturing, exporting, subcontracting, importing and stocking industrial
               raw materials and process equipments.
             </p>

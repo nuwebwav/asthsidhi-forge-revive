@@ -105,7 +105,7 @@ const PipesTubes = () => {
                 Product Overview
               </h2>
               <p className="text-muted-foreground mb-6">
-                Asthsidhi Metal offers a comprehensive range of pipes and tubes manufactured to
+                Astsiddhi Metal offers a comprehensive range of pipes and tubes manufactured to
                 international standards. Our products are sourced from leading manufacturers and
                 undergo rigorous quality checks to ensure superior performance in demanding applications.
               </p>

@@ -107,7 +107,7 @@ const Fasteners = () => {
                 Product Overview
               </h2>
               <p className="text-muted-foreground mb-6">
-                Asthsidhi Metal offers a comprehensive range of industrial fasteners manufactured
+                Astsiddhi Metal offers a comprehensive range of industrial fasteners manufactured
                 to international standards. Our fasteners are available in various materials,
                 sizes, and grades to meet the demanding requirements of different industries.
               </p>

@@ -5,12 +5,12 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    text: "Best part of Asthsidhi Metal is that they communicate well in advance. Set a plan, schedule & check twice before they supply. Their team has vast knowledge of stainless steel pipes and tubes. Excellent service!",
+    text: "Best part of Astsiddhi Metal is that they communicate well in advance. Set a plan, schedule & check twice before they supply. Their team has vast knowledge of stainless steel pipes and tubes. Excellent service!",
     author: "Rajesh Kumar",
     position: "Procurement Manager",
   },
   {
-    text: "We use Asthsidhi Metal because their standard is quality, performance, and pricing. If I were to describe them in one word, it would be 'solid', just like their products.",
+    text: "We use Astsiddhi Metal because their standard is quality, performance, and pricing. If I were to describe them in one word, it would be 'solid', just like their products.",
     author: "Amit Sharma",
     position: "Operations Director",
   },
@@ -20,7 +20,7 @@ const testimonials = [
     position: "Project Lead",
   },
   {
-    text: "Outstanding quality and reliable delivery. Asthsidhi Metal has been our trusted partner for over 5 years. Their commitment to excellence is unmatched in the industry.",
+    text: "Outstanding quality and reliable delivery. Astsiddhi Metal has been our trusted partner for over 5 years. Their commitment to excellence is unmatched in the industry.",
     author: "Vikram Singh",
     position: "CEO, Steel Works Ltd",
   },

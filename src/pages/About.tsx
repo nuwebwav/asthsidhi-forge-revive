@@ -60,7 +60,7 @@ const About = () => {
               About Us
             </span>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-accent-foreground mt-4">
-              Welcome to <span className="text-gradient-copper">Asthsidhi Metal</span>
+              Welcome to <span className="text-gradient-copper">Astsiddhi Metal</span>
             </h1>
             <p className="text-muted-foreground text-lg mt-6 max-w-2xl mx-auto">
               A pre-dominant player in the global market for manufacturing, exporting, and stocking industrial raw materials.
@@ -83,7 +83,7 @@ const About = () => {
                 Who We Are
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
-                Asthsidhi Metal is a pre-dominant player in the global market for the
+                Astsiddhi Metal is a pre-dominant player in the global market for the
                 manufacturing, exporting, subcontracting, importing and stocking industrial
                 raw materials and process equipments.
               </p>
@@ -187,7 +187,7 @@ const About = () => {
               <p className="text-muted-foreground mb-8">
                 With years of experience in the steel industry, we have built a reputation 
                 for reliability, quality, and exceptional customer service. Here's why 
-                clients choose Asthsidhi Metal.
+                clients choose Astsiddhi Metal.
               </p>
             </motion.div>
 
