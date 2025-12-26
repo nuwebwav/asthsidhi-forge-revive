@@ -9,9 +9,9 @@ import hero3 from "@/assets/hero-3.jpg";
 const slides = [
   {
     image: hero1,
-    subtitle: "Trusted Metal Solutions Since Day One",
-    title: "Trusted Importer, Stockist & Supplier of Industrial Metal Raw Materials",
-    highlight: "ASTSIDDHI METAL is a leading Stockist, Manufacturer, and Supplier of high-quality Stainless Steel, Mild Steel, Carbon Steel, Sheets, Plates, Coils, Pipes, Rods & Flanges.",
+    subtitle: "Welcome to Astsiddhi Metal",
+    title: "Trusted Metal Solutions Since Day One",
+    highlight: "industrial Metal Raw Materials.",
   },
   {
     image: hero2,
@@ -105,8 +105,8 @@ export const HeroCarousel = () => {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-all ${index === currentSlide
-                ? "bg-primary w-8"
-                : "bg-primary-foreground/50 hover:bg-primary-foreground/80"
+              ? "bg-primary w-8"
+              : "bg-primary-foreground/50 hover:bg-primary-foreground/80"
               }`}
             aria-label={`Go to slide ${index + 1}`}
           />

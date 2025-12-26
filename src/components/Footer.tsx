@@ -47,10 +47,17 @@ export const Footer = () => {
               subcontracting, importing and stocking industrial raw materials and process equipments.
             </p>
             <div className="flex gap-3">
-              {[Facebook, Twitter, Linkedin, Instagram].map((Icon, index) => (
+              {[
+                { Icon: Facebook, href: "#" },
+                { Icon: Twitter, href: "#" },
+                { Icon: Linkedin, href: "#" },
+                { Icon: Instagram, href: "https://www.instagram.com/astsiddhimetal?igsh=MTdlOG0zcGIzMTFybQ==" }
+              ].map(({ Icon, href }, index) => (
                 <a
                   key={index}
-                  href="#"
+                  href={href}
+                  target={href !== "#" ? "_blank" : undefined}
+                  rel={href !== "#" ? "noopener noreferrer" : undefined}
                   className="w-10 h-10 rounded-full bg-charcoal-light hover:bg-primary flex items-center justify-center transition-colors text-white"
                 >
                   <Icon className="w-5 h-5" />
@@ -117,21 +124,21 @@ export const Footer = () => {
               <li className="flex gap-3">
                 <MapPin className="w-5 h-5 text-white flex-shrink-0 mt-1" />
                 <span className="text-white text-sm">
-                  Office No.101, Building 105, Industrial Area, Mumbai - 400004, INDIA
+                  Gr.Floor, Chaili Balaya Building, 106-A, SS Maharaj Marg, 2nd Kumbharwada, Mumbai Maharashtra -400004, INDIA
                 </span>
               </li>
               <li className="flex gap-3">
                 <Phone className="w-5 h-5 text-white flex-shrink-0" />
                 <div className="text-white text-sm">
-                  <p>+91-98203-69290</p>
-                  <p>+91-22-6636-3290</p>
+                  <p>+91 9820521850</p>
+                  <p>+91 9987233056</p>
+                  <p>Hughes No: 022-6743 7458 / 6610 9355</p>
                 </div>
               </li>
               <li className="flex gap-3">
                 <Mail className="w-5 h-5 text-white flex-shrink-0" />
                 <div className="text-white text-sm">
-                  <p>info@asthsidhimetal.com</p>
-                  <p>sales@asthsidhimetal.com</p>
+                  <p>astsiddhimetal@gmail.com</p>
                 </div>
               </li>
             </ul>

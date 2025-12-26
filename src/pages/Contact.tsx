@@ -10,22 +10,22 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Our Office",
-    details: ["Office No.101, Building 105", "Industrial Area, Mumbai - 400004", "INDIA"],
+    details: ["Gr.Floor, Chaili Balaya Building, 106-A", "SS Maharaj Marg, 2nd Kumbharwada, Mumbai ", "Maharashtra -400004, INDIA"],
   },
   {
     icon: Phone,
     title: "Phone Number",
-    details: ["+91-98203-69290", "+91-22-6636-3290"],
+    details: ["+91 9820521850", "+91 9987233056", "Hughes No: 022-6743 7458 / 6610 9355"],
   },
   {
     icon: Mail,
     title: "Email Address",
-    details: ["info@asthsidhimetal.com", "sales@asthsidhimetal.com"],
+    details: ["astsiddhimetal@gmail.com"],
   },
   {
     icon: Clock,
     title: "Working Hours",
-    details: ["Monday - Saturday", "9:00 AM - 6:00 PM"],
+    details: ["Monday - Saturday", "9:00 AM - 8:00 PM"],
   },
 ];
 
@@ -63,7 +63,7 @@ const Contact = () => {
   return (
     <main className="min-h-screen">
       <Navbar />
-      
+
       {/* Hero Banner */}
       <section className="pt-32 pb-20 bg-gradient-steel">
         <div className="container mx-auto px-4">
@@ -99,7 +99,7 @@ const Contact = () => {
               className="lg:col-span-1 space-y-6"
             >
               <h2 className="font-display text-2xl text-foreground mb-8">Contact Information</h2>
-              
+
               {contactInfo.map((info, index) => (
                 <div
                   key={index}
@@ -130,7 +130,7 @@ const Contact = () => {
             >
               <div className="bg-card rounded-xl border border-border p-8">
                 <h2 className="font-display text-2xl text-foreground mb-6">Send Us a Message</h2>
-                
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
@@ -241,7 +241,7 @@ const Contact = () => {
       {/* Map Section */}
       <section className="h-96 bg-muted">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995!3d19.08219865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235.83544990508622!2d72.8268568146805!3d18.959383900000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce15fe3c60ff%3A0x9d2d9a49423601a4!2sAstsiddhi%20Metal!5e0!3m2!1sen!2sin!4v1766753425520!5m2!1sen!2sin"
           width="100%"
           height="100%"
           style={{ border: 0 }}
