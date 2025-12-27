@@ -15,7 +15,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone Number",
-    details: ["+91 9820521850", "+91 9987233056", "Hughes No: 022-6743 7458 / 6610 9355"],
+    details: ["+91 9820521850", "+91 9987233056", "Telephone No.: 022-6743 7458 / 6610 9355"],
   },
   {
     icon: Mail,
@@ -111,8 +111,17 @@ const Contact = () => {
                   <div>
                     <h3 className="font-display text-foreground mb-2">{info.title}</h3>
                     {info.details.map((detail, idx) => (
-                      <p key={idx} className="text-muted-foreground text-sm">
-                        {detail}
+                      <p key={idx} className="text-sm text-muted-foreground">
+                        {detail.includes("Telephone No") ? (
+                          <>
+                            <span className="font-bold text-primary bg-primary/10 p-1 rounded-sm mr-1">
+                              Telephone No.:
+                            </span>
+                            {detail.replace("Telephone No.:", "").trim()}
+                          </>
+                        ) : (
+                          detail
+                        )}
                       </p>
                     ))}
                   </div>

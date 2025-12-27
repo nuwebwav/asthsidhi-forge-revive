@@ -38,7 +38,7 @@ export const Footer = () => {
             <div className="flex items-center gap-3 mb-6">
               <img src={logo} alt="Astsiddhi Metal Logo" className="h-14 w-auto" />
               <div>
-                <span className="font-display text-xl font-bold text-primary-foreground">Asthsidhi</span>
+                <span className="font-display text-xl font-bold text-primary-foreground">Astsiddhi</span>
                 <span className="block text-xs tracking-widest uppercase text-secondary">Metal</span>
               </div>
             </div>
@@ -132,7 +132,7 @@ export const Footer = () => {
                 <div className="text-white text-sm">
                   <p>+91 9820521850</p>
                   <p>+91 9987233056</p>
-                  <p>Hughes No: 022-6743 7458 / 6610 9355</p>
+                  <p>Telephone No.: 022-6743 7458 / 6610 9355</p>
                 </div>
               </li>
               <li className="flex gap-3">

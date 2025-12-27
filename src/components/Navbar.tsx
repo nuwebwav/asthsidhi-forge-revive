@@ -42,11 +42,10 @@ export const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-border"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
@@ -55,7 +54,7 @@ export const Navbar = () => {
             <img src={logo} alt="Astsiddhi Metal Logo" className="h-14 w-auto" />
             <div className="hidden sm:block">
               <span className={`font-display text-xl font-bold ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
-                Asthsidhi
+                Astsiddhi
               </span>
               <span className={`block text-xs tracking-widest uppercase ${isScrolled ? "text-secondary" : "text-secondary"}`}>
                 Metal
@@ -74,16 +73,15 @@ export const Navbar = () => {
               >
                 <Link
                   to={item.href}
-                  className={`flex items-center gap-1 px-4 py-2 text-sm font-medium uppercase transition-colors ${
-                    isScrolled
+                  className={`flex items-center gap-1 px-4 py-2 text-sm font-medium uppercase transition-colors ${isScrolled
                       ? "text-foreground hover:text-primary"
                       : "text-primary-foreground/90 hover:text-primary-foreground"
-                  }`}
+                    }`}
                 >
                   {item.label}
                   {item.dropdown && <ChevronDown className="w-4 h-4" />}
                 </Link>
-                
+
                 <AnimatePresence>
                   {item.dropdown && activeDropdown === item.label && (
                     <motion.div

@@ -3,6 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import powerPlants from "@/assets/products/power_plants.png";
 import sugarIndustry from "@/assets/products/sugar_industry.png";
+import fertilizerBanana from "@/assets/products/fertilizer_banana.png";
 import petrochemical from "@/assets/products/petrochemical.png";
 import fabrication from "@/assets/products/fabrication.png";
 // Reusing petrochemical for oil & gas due to generation limit, which is visually similar
@@ -14,7 +15,7 @@ const industries = [
   { image: petrochemical, name: "Petrochemical" },
   { image: fabrication, name: "Fabrication" },
   { image: oilGas, name: "Oil & Gas Industries" },
-  { image: petrochemical, name: "Fertilizers" },
+  { image: fertilizerBanana, name: "Fertilizer Industries" },
 ];
 
 export const IndustriesSection = () => {

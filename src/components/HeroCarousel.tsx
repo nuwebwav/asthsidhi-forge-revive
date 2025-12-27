@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
+import hero4 from "@/assets/hero-4.jpg";
 
 const slides = [
   {
@@ -21,6 +22,12 @@ const slides = [
   },
   {
     image: hero3,
+    subtitle: "We are Astsiddhi Metal",
+    title: "Quality that speaks for itself",
+    highlight: "in every product we deliver.",
+  },
+  {
+    image: hero4,
     subtitle: "We are Astsiddhi Metal",
     title: "Quality that speaks for itself",
     highlight: "in every product we deliver.",
