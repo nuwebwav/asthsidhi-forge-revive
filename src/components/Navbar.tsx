@@ -4,6 +4,7 @@ import { Menu, X, ChevronDown, Download, Phone } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
+import brochure from "@/assets/Astsiddhi_Metal_Catalogue_PDF_2025.pdf";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -43,8 +44,8 @@ export const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-border"
-          : "bg-transparent"
+        ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-border"
+        : "bg-transparent"
         }`}
     >
       <div className="container mx-auto px-4">
@@ -74,8 +75,8 @@ export const Navbar = () => {
                 <Link
                   to={item.href}
                   className={`flex items-center gap-1 px-4 py-2 text-sm font-medium uppercase transition-colors ${isScrolled
-                      ? "text-foreground hover:text-primary"
-                      : "text-primary-foreground/90 hover:text-primary-foreground"
+                    ? "text-foreground hover:text-primary"
+                    : "text-primary-foreground/90 hover:text-primary-foreground"
                     }`}
                 >
                   {item.label}
@@ -108,10 +109,12 @@ export const Navbar = () => {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button variant={isScrolled ? "outline" : "heroOutline"} size="sm">
-              <Download className="w-4 h-4" />
-              Brochure
-            </Button>
+            <a href={brochure} target="_blank" rel="noopener noreferrer">
+              <Button variant={isScrolled ? "outline" : "heroOutline"} size="sm">
+                <Download className="w-4 h-4" />
+                Brochure
+              </Button>
+            </a>
             <Link to="/contact">
               <Button variant="hero" size="sm">
                 <Phone className="w-4 h-4" />
@@ -166,10 +169,12 @@ export const Navbar = () => {
                 </div>
               ))}
               <div className="flex flex-col gap-3 mt-4">
-                <Button variant="outline" className="w-full">
-                  <Download className="w-4 h-4" />
-                  Download Brochure
-                </Button>
+                <a href={brochure} target="_blank" rel="noopener noreferrer" className="w-full">
+                  <Button variant="outline" className="w-full">
+                    <Download className="w-4 h-4" />
+                    Download Brochure
+                  </Button>
+                </a>
                 <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                   <Button variant="hero" className="w-full">
                     <Phone className="w-4 h-4" />
