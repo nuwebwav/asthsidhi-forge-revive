@@ -38,8 +38,8 @@ export const Footer = () => {
             <div className="flex items-center gap-3 mb-6">
               <img src={logo} alt="Astsiddhi Metal Logo" className="h-14 w-auto" />
               <div>
-                <span className="font-display text-xl font-bold text-primary-foreground">Astsiddhi</span>
-                <span className="block text-xs tracking-widest uppercase text-secondary">Metal</span>
+                <span className="font-display text-3xl font-semibold text-primary-foreground">Astsiddhi</span>
+                <span className="block text-lg font-medium tracking-widest uppercase text-secondary">Metal</span>
               </div>
             </div>
             <p className="text-white text-sm mb-6 leading-relaxed">
@@ -50,7 +50,7 @@ export const Footer = () => {
               {[
                 { Icon: Facebook, href: "#" },
                 { Icon: Twitter, href: "#" },
-                { Icon: Linkedin, href: "#" },
+                { Icon: Linkedin, href: "https://www.linkedin.com/in/astsiddhi-metal-44495b3a2" },
                 { Icon: Instagram, href: "https://www.instagram.com/astsiddhimetal?igsh=MTdlOG0zcGIzMTFybQ==" }
               ].map(({ Icon, href }, index) => (
                 <a
@@ -130,15 +130,23 @@ export const Footer = () => {
               <li className="flex gap-3">
                 <Phone className="w-5 h-5 text-white flex-shrink-0" />
                 <div className="text-white text-sm">
-                  <p>+91 9820521850</p>
-                  <p>+91 9987233056</p>
-                  <p>Telephone No.: 022-6743 7458 / 6610 9355</p>
+                  <p>
+                    <a href="tel:+919820521850" className="!text-white hover:text-primary transition-colors">+91 9820521850</a>
+                  </p>
+                  <p>
+                    <a href="tel:+919987233056" className="!text-white hover:text-primary transition-colors">+91 9987233056</a>
+                  </p>
+                  <p>
+                    Telephone No.: <a href="tel:02267437458" className="!text-white hover:text-primary transition-colors">022-6743 7458</a> / <a href="tel:02266109355" className="!text-white hover:text-primary transition-colors">6610 9355</a>
+                  </p>
                 </div>
               </li>
               <li className="flex gap-3">
                 <Mail className="w-5 h-5 text-white flex-shrink-0" />
                 <div className="text-white text-sm">
-                  <p>astsiddhimetal@gmail.com</p>
+                  <p>
+                    <a href="mailto:astsiddhimetal@gmail.com" className="!text-white hover:text-primary transition-colors">astsiddhimetal@gmail.com</a>
+                  </p>
                 </div>
               </li>
             </ul>

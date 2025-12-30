@@ -117,8 +117,12 @@ const Contact = () => {
                             <span className="font-bold text-primary bg-primary/10 p-1 rounded-sm mr-1">
                               Telephone No.:
                             </span>
-                            {detail.replace("Telephone No.:", "").trim()}
+                            <a href="tel:02267437458" className="hover:text-primary transition-colors">022-6743 7458</a> / <a href="tel:02266109355" className="hover:text-primary transition-colors">6610 9355</a>
                           </>
+                        ) : detail.includes("@") ? (
+                          <a href={`mailto:${detail}`} className="hover:text-primary transition-colors">{detail}</a>
+                        ) : detail.startsWith("+91") ? (
+                          <a href={`tel:${detail.replace(/\s+/g, '')}`} className="hover:text-primary transition-colors">{detail}</a>
                         ) : (
                           detail
                         )}

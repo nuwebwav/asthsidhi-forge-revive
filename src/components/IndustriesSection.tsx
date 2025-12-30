@@ -4,10 +4,11 @@ import { useRef } from "react";
 import powerPlants from "@/assets/products/power_plants.png";
 import sugarIndustry from "@/assets/products/sugar_industry.png";
 import fertilizerBanana from "@/assets/products/fertilizer_banana.png";
-import petrochemical from "@/assets/products/petrochemical.png";
+import petrochemical from "@/assets/products/petrochemical-2.jpg";
 import fabrication from "@/assets/products/fabrication.png";
+import oilGas from "@/assets/products/petrochemical.png";
 // Reusing petrochemical for oil & gas due to generation limit, which is visually similar
-const oilGas = petrochemical;
+//const oilGas = petrochemical;
 
 const industries = [
   { image: powerPlants, name: "Power Plants" },

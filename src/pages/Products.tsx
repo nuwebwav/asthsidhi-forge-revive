@@ -62,6 +62,9 @@ const materials = [
   "Duplex & Super Duplex Steel",
   "Nickel Alloys (Inconel, Monel, Hastelloy)",
   "Titanium & Copper Alloys",
+  "Copper (C11000, C10200, C26000, C46400, C21000)",
+  "Brass (C36000, C27000, C28000, C46400, C51000)",
+  "Aluminum (1050, 6061, 6063, 5083, 7075, 3003, 1100)",
 ];
 
 import productsHeroBanner from "@/assets/products_hero_banner.png";

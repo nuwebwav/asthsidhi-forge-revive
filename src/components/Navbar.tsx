@@ -54,10 +54,10 @@ export const Navbar = () => {
           <Link to="/" className="flex items-center gap-3">
             <img src={logo} alt="Astsiddhi Metal Logo" className="h-14 w-auto" />
             <div className="hidden sm:block">
-              <span className={`font-display text-xl font-bold ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
+              <span className={`font-display text-3xl font-semibold ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
                 Astsiddhi
               </span>
-              <span className={`block text-xs tracking-widest uppercase ${isScrolled ? "text-secondary" : "text-secondary"}`}>
+              <span className={`block text-lg font-medium tracking-widest uppercase ${isScrolled ? "text-secondary" : "text-secondary"}`}>
                 Metal
               </span>
             </div>
