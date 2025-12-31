@@ -67,9 +67,9 @@ export const AboutSection = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, x: 50 }}
+                initial={{ opacity: 0, x: 20 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
                 className="flex gap-5 p-6 rounded-xl bg-card border border-border hover:border-primary/50 hover:shadow-copper transition-all duration-300 group"
               >
                 <div className="flex-shrink-0 w-16 h-16 bg-gradient-copper rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">

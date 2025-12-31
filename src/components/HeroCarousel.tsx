@@ -52,7 +52,7 @@ export const HeroCarousel = () => {
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
-          initial={{ opacity: 0, scale: 1.1 }}
+          initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
@@ -63,6 +63,7 @@ export const HeroCarousel = () => {
             alt={slides[currentSlide].title}
             className="absolute inset-0 w-full h-full object-cover"
             loading={currentSlide === 0 ? "eager" : "lazy"}
+            {...(currentSlide === 0 ? { fetchPriority: "high" } : {})}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-transparent" />
         </motion.div>

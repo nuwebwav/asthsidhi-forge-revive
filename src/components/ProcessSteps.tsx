@@ -20,9 +20,9 @@ export const ProcessSteps = () => {
           {steps.map((step, index) => (
             <motion.div
               key={step.number}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
               className="relative text-center group"
             >
               <div className="relative inline-block mb-4">
@@ -37,7 +37,7 @@ export const ProcessSteps = () => {
               <p className="text-muted-foreground text-sm hidden lg:block">
                 {step.description}
               </p>
-              
+
               {/* Connector Line */}
               {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-10 left-[60%] w-[80%] h-[2px] bg-steel/30">

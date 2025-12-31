@@ -44,9 +44,9 @@ export const ProductsSection = () => {
           {products.map((product, index) => (
             <motion.div
               key={product.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
               className="group relative bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-elevated transition-all duration-500"
             >
               <div className="relative h-64 overflow-hidden">

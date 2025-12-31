@@ -44,9 +44,9 @@ export const IndustriesSection = () => {
           {industries.map((industry, index) => (
             <motion.div
               key={industry.name}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
               className="group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-copper transition-shadow duration-300"
             >
               <img

@@ -59,10 +59,10 @@ export const TestimonialsSection = () => {
         <div className="max-w-4xl mx-auto relative">
           <motion.div
             key={currentIndex}
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 0.5 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.4 }}
             className="bg-card rounded-2xl p-8 lg:p-12 shadow-elevated relative"
           >
             <Quote className="absolute top-6 left-6 w-12 h-12 text-primary/20" />
@@ -100,9 +100,8 @@ export const TestimonialsSection = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    index === currentIndex ? "bg-primary w-6" : "bg-muted-foreground/50"
-                  }`}
+                  className={`w-2 h-2 rounded-full transition-all ${index === currentIndex ? "bg-primary w-6" : "bg-muted-foreground/50"
+                    }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
               ))}
