@@ -56,7 +56,7 @@ export const AboutSection = () => {
               a novel spot in this industry due to our commitment to excellence and customer
               satisfaction.
             </p>
-            <Button variant="hero" className="group">
+            <Button variant="hero" className="group" aria-label="Learn more about Astsiddhi Metal">
               More About Us
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>

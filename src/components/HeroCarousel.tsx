@@ -80,12 +80,20 @@ export const HeroCarousel = () => {
           <span className="inline-block text-secondary font-display text-sm tracking-[0.3em] uppercase mb-4">
             {slides[currentSlide].subtitle}
           </span>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-6">
-            {slides[currentSlide].title}
-            <br />
-            <span className="text-gradient-copper">{slides[currentSlide].highlight}</span>
-          </h1>
-          <Button variant="hero" size="xl" className="group">
+          {currentSlide === 0 ? (
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-6">
+              {slides[currentSlide].title}
+              <br />
+              <span className="text-gradient-copper">{slides[currentSlide].highlight}</span>
+            </h1>
+          ) : (
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-6">
+              {slides[currentSlide].title}
+              <br />
+              <span className="text-gradient-copper">{slides[currentSlide].highlight}</span>
+            </h2>
+          )}
+          <Button variant="hero" size="xl" className="group" aria-label="Contact Astsiddhi Metal">
             Contact Us
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </Button>

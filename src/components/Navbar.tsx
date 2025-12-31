@@ -116,7 +116,7 @@ export const Navbar = () => {
               </Button>
             </a>
             <Link to="/contact">
-              <Button variant="hero" size="sm">
+              <Button variant="hero" size="sm" aria-label="Contact Astsiddhi Metal">
                 <Phone className="w-4 h-4" />
                 Contact Us
               </Button>
@@ -177,7 +177,7 @@ export const Navbar = () => {
                   </Button>
                 </a>
                 <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Button variant="hero" className="w-full">
+                  <Button variant="hero" className="w-full" aria-label="Contact Astsiddhi Metal">
                     <Phone className="w-4 h-4" />
                     Contact Us
                   </Button>
