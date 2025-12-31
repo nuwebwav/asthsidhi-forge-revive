@@ -110,7 +110,7 @@ export const Navbar = () => {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <a href={brochure} target="_blank" rel="noopener noreferrer">
-              <Button variant={isScrolled ? "outline" : "heroOutline"} size="sm">
+              <Button variant={isScrolled ? "outline" : "heroOutline"} size="sm" aria-label="Download Catalogue">
                 <Download className="w-4 h-4" />
                 Brochure
               </Button>
@@ -127,6 +127,7 @@ export const Navbar = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`lg:hidden p-2 ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

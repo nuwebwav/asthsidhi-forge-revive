@@ -48,17 +48,18 @@ export const Footer = () => {
             </p>
             <div className="flex gap-3">
               {[
-                { Icon: Facebook, href: "#" },
-                { Icon: Twitter, href: "#" },
-                { Icon: Linkedin, href: "https://www.linkedin.com/in/astsiddhi-metal-44495b3a2" },
-                { Icon: Instagram, href: "https://www.instagram.com/astsiddhimetal?igsh=MTdlOG0zcGIzMTFybQ==" }
-              ].map(({ Icon, href }, index) => (
+                { Icon: Facebook, href: "#", label: "Facebook" },
+                { Icon: Twitter, href: "#", label: "Twitter" },
+                { Icon: Linkedin, href: "https://www.linkedin.com/in/astsiddhi-metal-44495b3a2", label: "LinkedIn" },
+                { Icon: Instagram, href: "https://www.instagram.com/astsiddhimetal?igsh=MTdlOG0zcGIzMTFybQ==", label: "Instagram" }
+              ].map(({ Icon, href, label }, index) => (
                 <a
                   key={index}
                   href={href}
                   target={href !== "#" ? "_blank" : undefined}
                   rel={href !== "#" ? "noopener noreferrer" : undefined}
                   className="w-10 h-10 rounded-full bg-charcoal-light hover:bg-primary flex items-center justify-center transition-colors text-white"
+                  aria-label={label}
                 >
                   <Icon className="w-5 h-5" />
                 </a>
@@ -150,7 +151,7 @@ export const Footer = () => {
                 </div>
               </li>
             </ul>
-            <Button variant="hero" size="sm" className="mt-6">
+            <Button variant="hero" size="sm" className="mt-6" aria-label="Request a quote">
               Get Quote
             </Button>
           </motion.div>

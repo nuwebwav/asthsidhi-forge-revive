@@ -54,6 +54,9 @@ export const ProductsSection = () => {
                   src={product.image}
                   alt={product.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
+                  width="500"
+                  height="400"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
               </div>

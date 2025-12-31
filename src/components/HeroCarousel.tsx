@@ -58,9 +58,11 @@ export const HeroCarousel = () => {
           transition={{ duration: 0.8 }}
           className="absolute inset-0"
         >
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
+          <img
+            src={slides[currentSlide].image}
+            alt={slides[currentSlide].title}
+            className="absolute inset-0 w-full h-full object-cover"
+            loading={currentSlide === 0 ? "eager" : "lazy"}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-transparent" />
         </motion.div>
