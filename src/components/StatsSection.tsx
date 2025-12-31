@@ -18,21 +18,19 @@ const Counter = ({ value, suffix }: { value: number; suffix: string }) => {
   useEffect(() => {
     if (!isInView) return;
 
-    let start = 0;
+    let startTimestamp: number | null = null;
     const duration = 2000;
-    const increment = value / (duration / 16);
 
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= value) {
-        setCount(value);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      setCount(Math.floor(progress * value));
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
       }
-    }, 16);
+    };
 
-    return () => clearInterval(timer);
+    window.requestAnimationFrame(step);
   }, [isInView, value]);
 
   return (

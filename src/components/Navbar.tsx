@@ -52,7 +52,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <img src={logo} alt="Astsiddhi Metal Logo" className="h-14 w-auto" />
+            <img src={logo} alt="Astsiddhi Metal Logo" className="h-14 w-auto" width="56" height="56" />
             <div className="hidden sm:block">
               <span className={`font-display text-3xl font-semibold ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
                 Astsiddhi
