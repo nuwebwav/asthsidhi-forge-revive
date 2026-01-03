@@ -151,8 +151,8 @@ export const Footer = () => {
                 </div>
               </li>
             </ul>
-            <Button variant="hero" size="sm" className="mt-6" aria-label="Request a quote">
-              Get Quote
+            <Button variant="hero" size="sm" className="mt-6" aria-label="Request a quote" asChild>
+              <Link to="/contact">Get Quote</Link>
             </Button>
           </motion.div>
         </div>
