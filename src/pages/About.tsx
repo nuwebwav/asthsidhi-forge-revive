@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Target, Eye, Shield, Users, Award, Globe, CheckCircle } from "lucide-react";
 import { StatsSection } from "@/components/StatsSection";
+import { SEO } from "@/components/SEO";
 
 const features = [
   {
@@ -45,8 +46,12 @@ const whyChooseUs = [
 const About = () => {
   return (
     <main className="min-h-screen">
+      <SEO
+        title="About Us - Astsiddhi Metal"
+        description="Learn more about Astsiddhi Metal, a leading player in manufacturing, exporting, and stocking industrial raw materials and steel products."
+      />
       <Navbar />
-      
+
       {/* Hero Banner */}
       <section className="pt-32 pb-20 bg-gradient-steel">
         <div className="container mx-auto px-4">
@@ -94,9 +99,9 @@ const About = () => {
                 satisfaction.
               </p>
               <p className="text-muted-foreground">
-                Our team of skilled professionals works tirelessly to ensure that every product 
-                leaving our facility meets the highest standards of quality and precision. We 
-                believe in building long-term relationships with our clients through trust, 
+                Our team of skilled professionals works tirelessly to ensure that every product
+                leaving our facility meets the highest standards of quality and precision. We
+                believe in building long-term relationships with our clients through trust,
                 reliability, and exceptional service.
               </p>
             </motion.div>
@@ -185,8 +190,8 @@ const About = () => {
                 Your Trusted <span className="text-gradient-copper">Partner</span>
               </h2>
               <p className="text-muted-foreground mb-8">
-                With years of experience in the steel industry, we have built a reputation 
-                for reliability, quality, and exceptional customer service. Here's why 
+                With years of experience in the steel industry, we have built a reputation
+                for reliability, quality, and exceptional customer service. Here's why
                 clients choose Astsiddhi Metal.
               </p>
             </motion.div>

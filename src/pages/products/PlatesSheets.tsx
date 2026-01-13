@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 import platesSheets from "@/assets/products/plates-sheets.jpg";
 
 import productsHeroBanner from "@/assets/products_hero_banner.png";
@@ -46,6 +47,10 @@ const types = [
 const PlatesSheets = () => {
   return (
     <main className="min-h-screen">
+      <SEO
+        title="Plates & Sheets - Astsiddhi Metal"
+        description="Premium quality steel plates and sheets available in various thicknesses, grades, and surface finishes for pressure vessels and industrial use."
+      />
       <Navbar />
 
       {/* Hero Banner */}

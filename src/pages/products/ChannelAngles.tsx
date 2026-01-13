@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 import channelAngles from "@/assets/products/channel-angles.jpg";
 
 import productsHeroBanner from "@/assets/products_hero_banner.png";
@@ -48,6 +49,10 @@ const types = [
 const ChannelAngles = () => {
   return (
     <main className="min-h-screen">
+      <SEO
+        title="Channel & Angles - Astsiddhi Metal"
+        description="Structural steel channels and angles for construction and industrial applications. Offering C-Channels, U-Channels, and Equal/Unequal Angles."
+      />
       <Navbar />
 
       {/* Hero Banner */}

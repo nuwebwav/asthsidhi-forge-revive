@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Quote, Star } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const testimonials = [
   {
@@ -65,6 +66,10 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <main className="min-h-screen">
+      <SEO
+        title="Client Testimonials - Astsiddhi Metal"
+        description="Read what our valued clients have to say about the quality, performance, and reliability of Astsiddhi Metal's steel products and services."
+      />
       <Navbar />
 
       {/* Hero Banner */}

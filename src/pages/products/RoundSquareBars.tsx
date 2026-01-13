@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 import roundSquareBars from "@/assets/products/round-square-bars.jpg";
 
 import productsHeroBanner from "@/assets/products_hero_banner.png";
@@ -48,6 +49,10 @@ const types = [
 const RoundSquareBars = () => {
   return (
     <main className="min-h-screen">
+      <SEO
+        title="Round & Square Bars - Astsiddhi Metal"
+        description="Quality round and square bars for machining, fabrication, and engineering. Available in Bright, Black, and Polished finishes."
+      />
       <Navbar />
 
       {/* Hero Banner */}

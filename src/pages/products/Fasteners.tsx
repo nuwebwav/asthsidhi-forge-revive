@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 import fasteners from "@/assets/products/fasteners.jpg";
 
 import productsHeroBanner from "@/assets/products_hero_banner.png";
@@ -48,6 +49,10 @@ const types = [
 const Fasteners = () => {
   return (
     <main className="min-h-screen">
+      <SEO
+        title="Industrial Fasteners - Astsiddhi Metal"
+        description="Complete range of high-quality industrial fasteners including hex bolts, nuts, screws, and washers in various grades like SS 304 and 316."
+      />
       <Navbar />
 
       {/* Hero Banner */}

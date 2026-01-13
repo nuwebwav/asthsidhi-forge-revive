@@ -8,10 +8,12 @@ import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { IndustriesSection } from "@/components/IndustriesSection";
 import { ClientsSection } from "@/components/ClientsSection";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 
 const Index = () => {
   return (
     <main className="min-h-screen">
+      <SEO />
       <Navbar />
       <HeroCarousel />
       <AboutSection />

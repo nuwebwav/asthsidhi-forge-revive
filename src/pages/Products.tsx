@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 import pipesTubes from "@/assets/products/pipes-tubes.jpg";
 import platesSheets from "@/assets/products/plates-sheets.jpg";
 import fasteners from "@/assets/products/fasteners.jpg";
@@ -72,6 +73,10 @@ import productsHeroBanner from "@/assets/products_hero_banner.png";
 const Products = () => {
   return (
     <main className="min-h-screen">
+      <SEO
+        title="Products - Astsiddhi Metal"
+        description="Explore our range of high-quality stainless steel pipes, tubes, plates, sheets, fasteners, and industrial raw materials."
+      />
       <Navbar />
 
       {/* Hero Banner */}

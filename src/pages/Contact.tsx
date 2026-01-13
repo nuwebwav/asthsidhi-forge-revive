@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useState, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
+import { SEO } from "@/components/SEO";
 
 const contactInfo = [
   {
@@ -104,6 +105,10 @@ const Contact = () => {
 
   return (
     <main className="min-h-screen">
+      <SEO
+        title="Contact Us - Astsiddhi Metal"
+        description="Get in touch with Astsiddhi Metal for inquiries about our steel products and services. We are located in Mumbai, India."
+      />
       <Navbar />
 
       {/* Hero Banner */}

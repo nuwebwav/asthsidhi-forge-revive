@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 import pipesTubes from "@/assets/products/pipes-tubes.jpg";
 
 import productsHeroBanner from "@/assets/products_hero_banner.png";
@@ -46,6 +47,10 @@ const types = [
 const PipesTubes = () => {
   return (
     <main className="min-h-screen">
+      <SEO
+        title="Pipes & Tubes - Astsiddhi Metal"
+        description="High-quality stainless steel, carbon steel, and alloy steel pipes and tubes for various industrial applications including Oil & Gas, Power Gen, and more."
+      />
       <Navbar />
 
       {/* Hero Banner */}

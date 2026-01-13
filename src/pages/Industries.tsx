@@ -3,64 +3,65 @@ import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Zap, Factory, Droplets, Wrench, Fuel, Building2, Ship, Plane, Train, Atom } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 
 const industries = [
-  { 
-    icon: Zap, 
+  {
+    icon: Zap,
     name: "Power Plants",
     description: "Supplying high-quality steel products for thermal, nuclear, and renewable power generation facilities.",
     products: ["Boiler Tubes", "Heat Exchangers", "Pressure Vessels", "Structural Steel"]
   },
-  { 
-    icon: Factory, 
+  {
+    icon: Factory,
     name: "Sugar Industries",
     description: "Comprehensive steel solutions for sugar mills and processing plants.",
     products: ["SS Pipes & Tubes", "Flanges", "Fabrication Materials", "Process Equipment"]
   },
-  { 
-    icon: Droplets, 
+  {
+    icon: Droplets,
     name: "Petrochemical",
     description: "Corrosion-resistant materials for refineries and chemical processing units.",
     products: ["Alloy Steel Pipes", "Stainless Steel Fittings", "Heat Resistant Alloys", "High-Pressure Components"]
   },
-  { 
-    icon: Wrench, 
+  {
+    icon: Wrench,
     name: "Fabrication",
     description: "Raw materials and components for metal fabrication workshops and industries.",
     products: ["Plates & Sheets", "Structural Sections", "Fasteners", "Welding Materials"]
   },
-  { 
-    icon: Fuel, 
+  {
+    icon: Fuel,
     name: "Oil & Gas",
     description: "Premium grade materials for upstream, midstream, and downstream operations.",
     products: ["Line Pipes", "Casing & Tubing", "Valves & Fittings", "Offshore Components"]
   },
-  { 
-    icon: Building2, 
+  {
+    icon: Building2,
     name: "Construction",
     description: "Structural steel and building materials for commercial and industrial construction.",
     products: ["TMT Bars", "Structural Sections", "Roofing Sheets", "Cladding Materials"]
   },
-  { 
-    icon: Ship, 
+  {
+    icon: Ship,
     name: "Shipbuilding",
     description: "Marine-grade materials for ship construction and repair yards.",
     products: ["Marine Grade Steel", "Corrosion Resistant Alloys", "Deck Plates", "Hull Materials"]
   },
-  { 
-    icon: Plane, 
+  {
+    icon: Plane,
     name: "Aerospace",
     description: "High-performance alloys for aerospace and defense applications.",
     products: ["Titanium Alloys", "Nickel Superalloys", "High-Strength Steels", "Precision Components"]
   },
-  { 
-    icon: Train, 
+  {
+    icon: Train,
     name: "Railways",
     description: "Quality materials for railway infrastructure and rolling stock.",
     products: ["Rail Steel", "Coach Components", "Fasteners", "Structural Steel"]
   },
-  { 
-    icon: Atom, 
+  {
+    icon: Atom,
     name: "Nuclear",
     description: "Specialized materials meeting stringent nuclear industry standards.",
     products: ["Nuclear Grade SS", "Special Alloys", "Reactor Components", "Safety Equipment"]
@@ -70,8 +71,12 @@ const industries = [
 const Industries = () => {
   return (
     <main className="min-h-screen">
+      <SEO
+        title="Industries We Serve - Astsiddhi Metal"
+        description="We provide quality steel products to various industries including Power Plants, Petrochemical, Oil & Gas, and more."
+      />
       <Navbar />
-      
+
       {/* Hero Banner */}
       <section className="pt-32 pb-20 bg-gradient-steel">
         <div className="container mx-auto px-4">

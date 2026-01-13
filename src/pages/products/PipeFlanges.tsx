@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 import pipeFlanges from "@/assets/products/pipe-flanges.jpg";
 
 import productsHeroBanner from "@/assets/products_hero_banner.png";
@@ -59,6 +60,10 @@ const fittings = [
 const PipeFlanges = () => {
   return (
     <main className="min-h-screen">
+      <SEO
+        title="Pipe & Flange Fittings - Astsiddhi Metal"
+        description="Precision-engineered pipe fittings and flanges for secure, leak-proof connections. Available in various SS grades and pressure ratings."
+      />
       <Navbar />
 
       {/* Hero Banner */}
