@@ -13,7 +13,7 @@ export const SEO = ({
     keywords = "stainless steel pipes, steel tubes, metal supplier, industrial materials, steel manufacturer, India"
 }: SEOProps) => {
     const location = useLocation();
-    const baseUrl = "https://astsiddhimetal.com";
+    const baseUrl = "https://www.astsiddhimetal.com";
     // Remove trailing slash for consistency except for root
     const path = location.pathname === '/' ? '' : location.pathname;
     const canonicalUrl = `${baseUrl}${path}`;
